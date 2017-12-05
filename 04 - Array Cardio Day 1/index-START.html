@@ -89,7 +89,17 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    
+    const datasum = data.reduce((sum, car) => {
+      if (sum[car]) {
+        sum[car]++;
+        return sum;
+      } else {
+        sum[car] = 1;
+        return sum;
+      }
+    }, {});
+
+    console.log(datasum);
 
   </script>
 </body>
